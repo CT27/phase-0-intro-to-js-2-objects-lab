@@ -1,10 +1,14 @@
 // Write your solution in this file!
+//1.
 const employee = {
   name: "John",
-  surname: "smith",
+  streetAddress: "10 Loop street",
 };
 
-function updateEmployeeWithKeyAndValue(employee) {
-  employee.name = "Sam";
+console.log(employeeWithKeyAndValue());
+
+//2.
+function updateEmployeeWithKeyAndValue(employee, key, value) {
+  return { name: "Sam", ...1, streetAddress: "11 Broadway", ...2 };
 }
 console.log(updateEmployeeWithKeyAndValue());
