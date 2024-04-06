@@ -20,6 +20,20 @@ function destructivelyUpdateEmployeeWithKeyAndValue() {
 }
 
 //4.
+
+const newEmployee = { ...employee };
+
 function deleteFromEmployeeByKey() {
-  const newEmployee = { ...employee };
+  delete newEmployee.name;
+  newEmployee.name = "Sam";
+  newEmployee.streetAddress = "11 Broadway";
+  return newEmployee;
+}
+
+console.log(deleteFromEmployeeByKey()); // this one deletes john and adds Sam
+console.log(newEmployee); // this one is a clone of original
+
+function destructivelyDeleteFromEmployeeByKey() {
+  delete employee.name;
+  return employee;
 }
